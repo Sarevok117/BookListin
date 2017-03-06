@@ -33,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
         recyclerView = (RecyclerView) this.findViewById(R.id.recycler_view);
 
         layoutManager = new LinearLayoutManager(this);
-//        layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
 
         Call<Page> call = ServiceSingleton.getmInstance().getService().getBookPage();
         call.enqueue(new Callback<Page>() {
